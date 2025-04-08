@@ -6,18 +6,18 @@
       "supplier details": [
         {
           "Legal_Entity_Name": "Sup_1782",
-          "ERP Id": "ERP1234",
-          "Legal Form": "CompanyLegal1",
-          "Purchase Payment terms": "1 week max Arrival date +5",
+          "ERPId": "ERP1234",
+          "Legal_Form": "CompanyLegal1",
+          "Purchase_Payment_terms": "1 week max Arrival date +5",
           "Buyer": "Akhil Harold",
           "Billing_Address": "Address of the Bill",
           "Billing_Address2": "Address2"
         },
         {
           "Legal_Entity_Name": "Sup_1784",
-          "ERP Id": "ERP6722",
-          "Legal Form": "CompanyLeg98",
-          "Purchase Payment terms": "1 week max Arrival date +5",
+          "ERPId": "ERP6722",
+          "Legal_Form": "CompanyLeg98",
+          "Purchase_Payment_terms": "1 week max Arrival date +5",
           "Buyer": "Akhil Harold",
           "Billing_Address": "New Address 2",
           "Billing_Address2": "New Address2"

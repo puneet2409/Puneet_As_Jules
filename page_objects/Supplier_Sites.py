@@ -13,8 +13,8 @@ class Supplier_Sites:
 
         def add_newSupplier(self,value_to_fill,supp_l):
 
-            buyer = "Akhil Harold"
-            purchase = "1 week max Arrival date +5"
+            buyer = supp_l["Buyer"]
+            purchase = supp_l["Purchase_Payment_terms"]
 
             # Add a new Supplier
             self.page.get_by_role("button", name="Add a new supplier").click()
@@ -24,9 +24,9 @@ class Supplier_Sites:
             self.page.locator("div[data-test-id='Company.companyLegalName'] input").fill(supp_l["Legal_Entity_Name"])
             time.sleep(5)
             # ERP Id
-            self.page.locator("div[data-test-id='Company.erpId'] input").fill("ERP1234")
+            self.page.locator("div[data-test-id='Company.erpId'] input").fill(supp_l["ERPId"])
             # Legal Form
-            self.page.locator("div[data-test-id='Company.legalForm'] input").fill("CompanyLegal1")
+            self.page.locator("div[data-test-id='Company.legalForm'] input").fill(supp_l["Legal_Form"])
 
             # Purchase Payment terms
             self.page.locator("div[data-test-id='Company.paymentTerms'] input").click()
@@ -41,10 +41,10 @@ class Supplier_Sites:
             self.page.get_by_role("button", name="Next").click()
 
             # Billing And Financial Address 1
-            self.page.locator("div[data-test-id='AddressForm.address'] input").fill("Address of the Bill")
+            self.page.locator("div[data-test-id='AddressForm.address'] input").fill(supp_l["Billing_Address"])
 
             # Billing And Financial Address 2
-            self.page.locator("div[data-test-id='AddressForm.address2'] input").fill("Address2")
+            self.page.locator("div[data-test-id='AddressForm.address2'] input").fill(supp_l["Billing_Address2"])
 
             # Save the Supplier details
             self.page.get_by_role("button", name="Save").click()
