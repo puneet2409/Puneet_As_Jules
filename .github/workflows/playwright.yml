@@ -31,5 +31,5 @@ jobs:
 
     - name: Run Playwright tests
       run: |
-        pytest --report=report.html
+        pytest 
 
