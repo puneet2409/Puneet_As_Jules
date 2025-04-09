@@ -22,7 +22,7 @@ class Supplier_Sites:
             self.page.locator("div[data-test-id='Company.companyName'] input").fill(value_to_fill)
             # Legal Entity Name
             self.page.locator("div[data-test-id='Company.companyLegalName'] input").fill(supp_l["Legal_Entity_Name"])
-            time.sleep(5)
+
             # ERP Id
             self.page.locator("div[data-test-id='Company.erpId'] input").fill(supp_l["ERPId"])
             # Legal Form
