@@ -17,6 +17,6 @@ class LoginPage:
 
         def logout(self):
             # Logout
-            self.page.get_by_text("Qa JULES").click()
+            self.page.locator("div[style*='align-items: center; display: inline-grid'] div").get_by_text("Qa JULES").click()
             self.page.get_by_role("menuitem", name="Log out").click()
 

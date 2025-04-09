@@ -16,10 +16,12 @@ def test_menunavigation(user_l,setup):
     # Login
     log.login(user_l["username"], user_l["password"])
 
+
     # Supplier Page Object from page_objects
     sdMBar = Side_Menu_Bar(setup)
 
     # Navigation to the Suppliers and Sites
+    setup.evaluate("document.body.style.zoom='80%'")
     sdMBar.navigate_Supplier_sites()
 
     # Navigation to the Sales
@@ -40,11 +42,12 @@ def test_menunavigation(user_l,setup):
     # Navigate to the Inbound Loads section
     sdMBar.navigate_Inbound_loads()
 
-    # Navigate to the Notes section
-    sdMBar.navigate_Notes()
-
     # Navigate to the Planning & Booking section
     sdMBar.navigate_Planning_Booking()
 
+    # Navigate to the Notes section
+    sdMBar.navigate_Notes()
+
+    setup.evaluate("document.body.style.zoom='100%'")
     # Logout
     log.logout()

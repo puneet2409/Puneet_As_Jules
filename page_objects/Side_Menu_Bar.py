@@ -38,7 +38,7 @@ class Side_Menu_Bar:
 
     def navigate_Rate_management(self):
         self.page.get_by_test_id("LocalShippingIcon").click()
-        self.page.get_by_role("link", name="Rate management").click()
+        self.page.get_by_role("link", name="Rate management").first.click()
         time.sleep(5)
 
     def navigate_Invoices(self):
