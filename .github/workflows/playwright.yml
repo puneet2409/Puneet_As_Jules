@@ -33,13 +33,3 @@ jobs:
       run: |
         mkdir -p reports
         pytest testcases/
-
-    - name: List files in reports/
-      run: ls -l reports
-
-    - name: Upload HTML report
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-report
-        path: reports/report.html
