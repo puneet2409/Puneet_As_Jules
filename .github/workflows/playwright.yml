@@ -29,6 +29,17 @@ jobs:
       run: |
         python -m playwright install
 
-    - name: Run Playwright tests
+    - name: Run Playwright tests and generate HTML report
       run: |
-        pytest testcases/
+        mkdir -p reports
+        pytest testcases/ --html=reports/report.html --self-contained-html
+
+    - name: List files in reports
+      run: ls -l reports
+
+    - name: Upload HTML report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-report
+        path: reports/report.html
