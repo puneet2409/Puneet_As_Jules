@@ -1,4 +1,7 @@
 playwright
 pytest
 pytest-html
+pytest-html-reporter
+chromedriver
+chromedriver-auto
 pytest-playwright
