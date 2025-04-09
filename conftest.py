@@ -9,7 +9,7 @@ def supp_l(request):
 
 @pytest.fixture()
 def setup(playwright: Playwright, request):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch()
     context = browser.new_context()
     # setting up for tracing start
     context.tracing.start(screenshots=True, snapshots=True, sources=True)
