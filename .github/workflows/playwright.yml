@@ -31,11 +31,11 @@ jobs:
 
     - name: Run Playwright tests
       run: |
-        pytest testcases/ --html=report.html --self-contained-html
+        pytest testcases/ --report=reports/report.html
 
     - name: Upload HTML report
       if: always()
       uses: actions/upload-artifact@v3
       with:
         name: test-report
-        path: report.html
+        path: reports/report.html

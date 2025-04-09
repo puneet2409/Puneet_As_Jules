@@ -14,7 +14,7 @@ class Side_Menu_Bar:
     def navigate_Purchases_Trading(self):
         self.page.get_by_test_id("ShoppingCartIcon").click()
         self.page.get_by_role("link", name="Purchases (Trading)").click()
-        time.sleep(5)
+        time.sleep(4)
 
     def navigate_Sales(self):
         self.page.get_by_test_id("LocalOfferIcon").click()
