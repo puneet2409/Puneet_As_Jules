@@ -9,7 +9,7 @@ class Side_Menu_Bar:
     def navigate_Supplier_sites(self):
         self.page.get_by_test_id("LibraryBooksIcon").click()
         self.page.get_by_role("link", name="Suppliers & Sites").click()
-        time.sleep(5)
+        time.sleep(4)
 
     def navigate_Purchases_Trading(self):
         self.page.get_by_test_id("ShoppingCartIcon").click()
