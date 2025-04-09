@@ -1,3 +1,5 @@
+import time
+
 from playwright.sync_api import expect
 
 
@@ -11,7 +13,7 @@ class LoginPage:
             self.page.locator("input[name=email]").fill(username)
             self.page.locator("input[name=password]").fill(password)
             self.page.get_by_role("button", name="Log in").click()
-
+            time.sleep(5)
             # Home page loaded Check
             expect(self.page.get_by_text("Summary")).to_be_visible()
 
