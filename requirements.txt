@@ -1,5 +1,3 @@
 playwright
 pytest
-chromedriver
-chromedriver-auto
 pytest-reporter

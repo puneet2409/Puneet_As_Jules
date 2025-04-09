@@ -2,7 +2,7 @@ name: Run Playwright Python Tests
 
 on:
   push:
-    branches: [master]  # change to 'main' if your default branch is 'main'
+    branches: [master]
   pull_request:
     branches: [master]
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: 3.12  # or your preferred version
+        python-version: 3.12
 
     - name: Install dependencies
       run: |
@@ -31,5 +31,15 @@ jobs:
 
     - name: Run Playwright tests
       run: |
-        pytest 
+        mkdir -p reports
+        pytest testcases/
 
+    - name: List files in reports/
+      run: ls -l reports
+
+    - name: Upload HTML report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-report
+        path: reports/report.html
